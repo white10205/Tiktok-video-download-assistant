@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 400px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+      }
+      .video-item {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .video-url {
+        word-break: break-all;
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: #666;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+      }
+      .download-btn {
+        background-color: #ff0050;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .download-btn:hover {
+        background-color: #cc003f;
+        transform: scale(0.95);
+      }
+      .no-videos {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>抖音视频下载助手</h2>
+    <div id="videoList"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

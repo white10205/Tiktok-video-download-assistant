@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "抖音视频下载助手",
+  "version": "1.0",
+  "description": "一键下载抖音短视频",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "downloads",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
+    "*://*.douyin.com/*",
+    "*://*.amemv.com/*",
+    "*://*.bytedance.com/*",
+    "*://*.douyinvod.com/*",
+    "*://v3-web-prime.douyinvod.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.webm", "*.zip"],
+      "matches": ["https://*.douyin.com/*"]
+    }
+  ]
+}
