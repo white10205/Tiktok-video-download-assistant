@@ -12,10 +12,10 @@
   ],
   "host_permissions": [
     "*://*.douyin.com/*",
-    "*://*.amemv.com/*",
-    "*://*.bytedance.com/*",
     "*://*.douyinvod.com/*",
-    "*://v3-web-prime.douyinvod.com/*"
+    "*://*.bytedance.com/*",
+    "*://*.tiktokv.com/*",
+    "*://*.tiktokcdn.com/*"
   ],
   "action": {
     "default_popup": "popup.html"
@@ -25,8 +25,12 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["*.webm", "*.zip"],
-      "matches": ["https://*.douyin.com/*"]
+      "resources": ["*.webm", "*.zip", "*.mp4"],
+      "matches": [
+        "https://*.douyin.com/*",
+        "https://*.douyinvod.com/*",
+        "https://*.tiktokv.com/*"
+      ]
     }
   ]
 }
